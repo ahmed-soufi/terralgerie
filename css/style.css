@@ -1,0 +1,238 @@
+:root {
+  --brick: rgb(105, 48, 48);
+  --brick-light: #994747;
+  --sand: rgb(206, 161, 64);
+  --text-dark: #2b1f15;
+  --text-light: #f1ecec;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+.display_none {
+  display: none;
+}
+
+/* ----------------------   NAVBAR   -------------------------- */
+/* ----------------------   NAVBAR   -------------------------- */
+/* ----------------------   NAVBAR   -------------------------- */
+/* ----------------------   NAVBAR   -------------------------- */
+
+.navbar {
+  width: 100%;
+  /* background-color: #994747; */
+  position: fixed;
+  top: 0;
+  padding: 0.5rem 1rem;
+  /* border-bottom: 2px solid var(--sand); */
+}
+.navbar.cng{
+  background-color: rgba(73, 46, 34, 0.411);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.container {
+  /* width: 100%; */
+  max-width: 1200px;
+  justify-content: space-between;
+  margin: 0rem auto;
+  padding: 0 1rem;
+  height: 100%;
+}
+.navbar .container .menu_links {
+  gap: 2rem;
+  height: 3rem;
+}
+.navbar .container .menu_links .menu_item {
+  width: fit-content;
+}
+
+.navbar .container .menu_links a {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+.navbar .container .menu_links a:hover {
+  color: var(--sand);
+  transition: all 0.3s ease-in-out;
+}
+.navbar .container .menu_links .menu_item .dropdown li {
+  width: fit-content;
+  padding: 0 1rem;
+}
+.navbar .container .menu_links .menu_item .dropdown {
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Fully transparent */
+  position: absolute;
+  width: 9rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+  font-size: 0.8rem;
+}
+
+.navbar .container .menu_links .menu_item .dropdown.show {
+  visibility: visible; /* Make it visible */
+  opacity: 1; /* Fully opaque */
+}
+
+/* -------------------  Vertical menu (responsive) ------------------------ */
+/* -------------------  Vertical menu (responsive) ------------------------ */
+/* -------------------  Vertical menu (responsive) ------------------------ */
+/* -------------------  Vertical menu (responsive) ------------------------ */
+
+.vertical_menu {
+  display: none;
+  width: calc(100vw - 2rem);
+  max-width: 100vw;
+  height: 80vh;
+
+  justify-content: flex-start;
+}
+
+.vertical_menu .toggle_menu {
+  width: 100%;
+  justify-content: right;
+  display: none;
+}
+
+.vertical_menu .toggle_menu i {
+  font-size: 1.8rem;
+  color: var(--text-light);
+  padding: 1.3rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  border-radius: 0.5rem;
+}
+
+/* .vertical_menu .toggle_menu i:hover {
+  color: var(--sand);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+} */
+.vertical_menu .menu_links {
+  margin: 0;
+  height: 0; /* Initially collapsed */
+  width: 0; /* Initially collapsed */
+  overflow: hidden; /* Hide content when collapsed */
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
+  transition: height 0.5s ease, width 0.5s ease; /* Smooth transition */
+  padding: 1rem 1rem;
+}
+
+.vertical_menu .menu_links.open {
+  height: fit-content; /* Full height */
+  width: 100%; /* Full width */
+}
+.vertical_menu .menu_links li  {
+  width: calc(100%-1rem);
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: rgba(255, 0255, 0255, 0.2);
+  cursor: pointer;
+  border-radius: .5rem;
+  margin: .8rem;
+}
+.vertical_menu .menu_links li a {
+  color: var(--text-light);
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+/* .vertical_menu .menu_links li:hover a {
+  color: var(--sand);
+  cursor: pointer;
+} */
+
+
+.vertical_menu .menu_links .menu_item .sub_menu{
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  display: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease; /* Smooth transition */
+}
+.vertical_menu .menu_links .menu_item .sub_menu.show {
+  visibility: visible; /* Make it visible */
+  opacity: 1; /* Fully opaque */
+  height: fit-content;
+  display: block;
+  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease; /* Smooth transition */
+}
+/* ------------------ HERO SECTION ------------------------- */
+/* ------------------ HERO SECTION ------------------------- */
+/* ------------------ HERO SECTION ------------------------- */
+#hero_section {
+  background: linear-gradient(60deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url(../images/hero.jpg) no-repeat center center/cover;
+  width: 100%;
+  height: 95vh;
+  margin-top: 0;
+}
+
+#hero_section .container .content {
+  max-width: 80%;
+  margin: 0 auto;
+  color: var(--text-light);
+  min-width: 360px;
+}
+#hero_section .container .content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#hero_section .container .content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+@media screen and (max-width: 992px) {
+  /* Hiding navbar */
+  .navbar .container {
+    display: none;
+  }
+  .navbar .vertical_menu {
+    display: unset;
+  }
+
+  /* Showing vertical menu */
+  .vertical_menu .toggle_menu {
+    display: flex;
+  }
+}

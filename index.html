@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil | Terralgérie</title>
+    <meta name="description" content="TERRALGERIE" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navigation -->
+    <header>
+      <div class="navbar">
+
+        <!-------------               Navbar            ---------------------------->
+        <div class="container flex">
+          <ul class="menu_links flex">
+            <li class="menu_item"><a href="#">Reserver</a></li>
+            <div
+              style="border-left: 0.3rem solid var(--text-light); height: 100%"
+            ></div>
+            <li class="menu_item">
+              <a href="#">Nos services &nbsp;<i class="fa-solid fa-caret-down"></i></a>
+              <ul class="dropdown" style="position: absolute">
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+                <li><a href="#">Service 4</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="logo"><img src="images/logo.png" alt="" /></div>
+          <ul class="menu_links flex">
+            <li class="menu_item"><a href="#">À propos de nous</a></li>
+            <li class="menu_item"><a href="#">FAQ</a></li>
+            <li class="menu_item"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <!-------------               Vertical Menu (responsive)  ---------------------------->
+        <div class=" flex-col vertical_menu" >
+          <div class="toggle_menu flex" style="justify-content: space-between;"><img src="images/logo.png" alt="" style="height: 4.1rem;"><i class="fas fa-bars"></i></div>
+          <ul class="menu_links display_none">
+            <li class="menu_item"><a href="#">Reserver</a></li>
+            <li class="menu_item services">
+              <a href="#">Nos services <i class="fa-solid fa-caret-down"></i></a>
+              <ul class="sub_menu">
+                <li><a href="#">Service1</a></li>
+                <li><a href="#">Service1</a></li>
+                <li><a href="#">Service1</a></li>
+              </ul>
+            </li>
+            <li class="menu_item"><a href="#">À propos de nous</a></li>
+            <li class="menu_item"><a href="#">FAQ</a></li>
+            <li class="menu_item"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- end navigation-->
+    <section>
+      <div id="hero_section">
+        <div class="container flex">
+          <div class="content">
+            <h1>Welcome to Terralgérie</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+              aliquam facere a rem et culpa fugit accusamus excepturi. Ex ipsum
+              unde sed eum adipisci aperiam velit, magnam nihil non voluptas
+              provident, alias nostrum inventore! Error quasi ratione delectus
+              natus veniam provident, corrupti aliquid numquam quod? At voluptas
+              impedit maiores commodi!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="haja" style="height:100vh"></div>
+    </section>
+    <script src="js/script.js"></script>
+    <script>
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", ()=>{
+      if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        navbar.classList.add("cng");
+    }
+      else{
+        navbar.classList.remove("cng");
+      }
+    });
+
+
+    </script>
+  </body>
+</html>
