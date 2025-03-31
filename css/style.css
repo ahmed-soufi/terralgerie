@@ -5,9 +5,7 @@
   --text-dark: #2b1f15;
   --text-light: #f1ecec;
 }
-*,
-*::after,
-*::before {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -93,20 +91,26 @@ body {
 }
 .navbar .container .menu_links .menu_item .dropdown {
   visibility: hidden; /* Initially hidden */
-  opacity: 0; /* Fully transparent */
+   opacity: 0; /*Fully transparent */
   position: absolute;
-  width: 9rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+  width: 12rem;
+  background: inherit;
+  background: rgba(73, 46, 34, 0.8);
   backdrop-filter: blur(15px);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
   text-align: center;
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+  transition: opacity 0.3s ease, visibility 0.3s ease; 
   font-size: 0.8rem;
+  z-index: 1000;
 }
 
 .navbar .container .menu_links .menu_item .dropdown.show {
   visibility: visible; /* Make it visible */
-  opacity: 1; /* Fully opaque */
+  backdrop-filter: blur(15px) !important;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  opacity: 1; 
 }
 
 /* -------------------  Vertical menu (responsive) ------------------------ */
@@ -133,7 +137,7 @@ body {
   font-size: 1.8rem;
   color: var(--text-light);
   padding: 1.3rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(73, 46, 34, 0.411);
   backdrop-filter: blur(15px);
   border-radius: 0.5rem;
 }
@@ -145,19 +149,20 @@ body {
 } */
 .vertical_menu .menu_links {
   margin: 0;
-  height: 0; /* Initially collapsed */
+  max-height: 0; /* Initially collapsed */
   width: 0; /* Initially collapsed */
   overflow: hidden; /* Hide content when collapsed */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(73, 46, 34, 0.411);
   backdrop-filter: blur(15px);
   border-radius: 0.5rem 0 0.5rem 0.5rem;
-  transition: height 0.5s ease, width 0.5s ease; /* Smooth transition */
+  transition: all 0.5s ease, width 0.5s ease; /* Smooth transition */
   padding: 1rem 1rem;
 }
 
 .vertical_menu .menu_links.open {
-  height: fit-content; /* Full height */
+  max-height: 80vh; /* Full height */
   width: 100%; /* Full width */
+  transition: all 0.5s ease, width 0.5s ease; /* Smooth transition */
 }
 .vertical_menu .menu_links li  {
   width: calc(100%-1rem);

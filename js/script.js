@@ -14,6 +14,7 @@ dropdownParent.addEventListener("mouseout", (event) => {
     ) {
         dropdown.classList.remove("show");
     }
+    dropdown.style.backdropFilter = "blur(15px) !important";
 });
 
 
